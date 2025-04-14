@@ -9,7 +9,10 @@ Check out my SQL queries here: [project_sql folder](/project_sql/)
 # 🛠 Tools I Used
 - **SQL** | the main tool that I used for quering and analyzing data
 - **PostgreSQL** | the chosen database management system 
-- **Visual Studio Code** | my go-to code editor/IDE (choose your fighter 😉) for writing and running SQL queries    
+- **Python** | used to turn exported query results into data visualizations
+- **seaborn** | my library of choice for neat, insightful plots
+- **Jupyter Notebook** | used to write and display Python code and visualizations
+- **Visual Studio Code** | my go-to code editor/IDE (choose your fighter 😉) for writing and running SQL and Python code
   
   
 # 🔍 Insights
@@ -30,6 +33,8 @@ ORDER BY
     job_posting_count DESC 
 ```
 
+![plot1](/plots/1_most_in_demand_jobs.png)
+
 ### 2. What are the positions that require a degree most often? 
 
 ```sql
@@ -44,6 +49,8 @@ WHERE job_country = 'Poland'
 GROUP BY position
 ORDER BY degree_required_pct DESC;
 ```
+
+![plot2](/plots/2_jobs_requiring_degree.png)
 
 ### 3. What are the most in-demand skills for Data Analysts vs Data Scientists vs Data Engineers?
 
@@ -104,6 +111,101 @@ SELECT * FROM (
 
 ```
 
+Table of the most demanded skills by role.
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>demand_count</th>
+    </tr>
+    <tr>
+      <th>job_title</th>
+      <th>skill</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Data Analyst</th>
+      <th>sql</th>
+      <td>1581</td>
+    </tr>
+    <tr>
+      <th>excel</th>
+      <td>1186</td>
+    </tr>
+    <tr>
+      <th>python</th>
+      <td>950</td>
+    </tr>
+    <tr>
+      <th>tableau</th>
+      <td>692</td>
+    </tr>
+    <tr>
+      <th>power bi</th>
+      <td>644</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Data Scientist</th>
+      <th>python</th>
+      <td>1048</td>
+    </tr>
+    <tr>
+      <th>sql</th>
+      <td>908</td>
+    </tr>
+    <tr>
+      <th>r</th>
+      <td>387</td>
+    </tr>
+    <tr>
+      <th>azure</th>
+      <td>328</td>
+    </tr>
+    <tr>
+      <th>aws</th>
+      <td>295</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Data Engineer</th>
+      <th>python</th>
+      <td>2247</td>
+    </tr>
+    <tr>
+      <th>sql</th>
+      <td>2230</td>
+    </tr>
+    <tr>
+      <th>azure</th>
+      <td>1449</td>
+    </tr>
+    <tr>
+      <th>aws</th>
+      <td>1263</td>
+    </tr>
+    <tr>
+      <th>spark</th>
+      <td>1250</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 # 📚 What I Learned
 
