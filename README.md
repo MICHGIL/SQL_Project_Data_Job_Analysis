@@ -211,7 +211,7 @@ Table of the most demanded skills by role.
 
 This project allowed me to practice and implement some of the core SQL concepts, including:
 - Creating tables and defining schema
-- Importing data from a CSV file into a PostgreSQL database
+- Importing data from CSV files into a PostgreSQL database
 - Filtering and sorting data using `WHERE`, `ORDER BY`, and `LIMIT`
 - Aggregating data using `GROUP BY`, `COUNT`, `AVG`, etc. 
 - Joining tables with different types of `JOIN` operations
